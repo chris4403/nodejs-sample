@@ -30,7 +30,16 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Express'
+    title: 'Express',
+    content : ''
+  });
+});
+
+app.post('/', function(req, res){
+  var content = req.body.content || '';
+  res.render('index', {
+    title: 'Express',
+    content: content
   });
 });
 
