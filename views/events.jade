@@ -1,0 +1,6 @@
+h1= title
+p #{title}
+ul#events
+  each event in events
+    li 
+      a(href='/event?event_id=' + event.event_id, target='_blank') #{event.title}
